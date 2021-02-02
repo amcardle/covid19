@@ -1,10 +1,22 @@
 <script lang="ts">
-  import ExampleComponent from "../components/ExampleComponent.svelte";
+  import { onMount } from "svelte";
+
+  let state: string = "loading";
+  let data: Object = { cases: "...", todayCases: "..." };
+
+  onMount(async () => {
+    let result = await fetch(
+      "https://api.coronavirus.data.gov.uk/v1/data?" +
+        "filters=areaType=nation;areaName=england&" +
+        'structure={"date":"date","newCases":"newCasesByPublishDate"}'
+    ).then((result) => result.json());
+
+    console.log(result);
+  });
 </script>
 
 <main>
   <h1>Template</h1>
-  <ExampleComponent />
 </main>
 
 <style lang="scss">

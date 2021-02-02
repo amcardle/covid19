@@ -14,11 +14,7 @@
 
     console.log(result);
 
-
-
-
-    
-    console.table(result.data); 
+    console.table(result.data);
   });
 </script>
 
@@ -26,9 +22,9 @@
   <h1>Template</h1>
 </main>
 
-<style lang="scss"> 
+<style lang="scss">
   main {
-    text-align: center; 
+    text-align: center;
     padding: 1em;
     margin: 0 auto;
   }

@@ -6,7 +6,7 @@
 		"build": "svelte-kit build",
 		"start": "svelte-kit start",
 		"adapt": "svelte-kit adapt --verbose",
-		"test": "jest",
+		"test": "jest"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",

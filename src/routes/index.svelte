@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import _ from "lodash";
 
   let state: string = "loading";
   let data: Object = { cases: "...", todayCases: "..." };
@@ -7,11 +8,12 @@
   onMount(async () => {
     let result = await fetch(
       "https://api.coronavirus.data.gov.uk/v1/data?" +
-        "filters=areaType=nation;areaName=england&" +
-        'structure={"date":"date","newCases":"newCasesByPublishDate"}'
+        "filters=areaType=utla;areaCode=E06000052&" +
+        'structure={"date":"date","newCases":"newCasesByPublishDate", "totalCases":"cumCasesBySpecimenDate", "deaths": "cumDeaths28DaysByPublishDate"}'
     ).then((result) => result.json());
 
     console.log(result);
+    console.table(result.data);
   });
 </script>
 

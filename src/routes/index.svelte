@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import _ from "lodash";
-  import * as d3 from "d3";
+  //import _ from "lodash";
 
   let state: string = "loading";
   let data: Object = { cases: "...", todayCases: "..." };
@@ -14,7 +13,12 @@
     ).then((result) => result.json());
 
     console.log(result);
-    console.table(result.data);
+
+
+
+
+    
+    console.table(result.data); 
   });
 </script>
 
@@ -22,9 +26,9 @@
   <h1>Template</h1>
 </main>
 
-<style lang="scss">
+<style lang="scss"> 
   main {
-    text-align: center;
+    text-align: center; 
     padding: 1em;
     margin: 0 auto;
   }

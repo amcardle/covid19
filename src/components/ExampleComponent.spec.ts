@@ -11,3 +11,4 @@ test("function in component", () => {
   expect(component.addition(1, 2)).toEqual(3);
 });
 
+    

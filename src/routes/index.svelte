@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import _ from "lodash";
+  import * as d3 from "d3";
 
   let state: string = "loading";
   let data: Object = { cases: "...", todayCases: "..." };
